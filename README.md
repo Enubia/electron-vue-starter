@@ -1,6 +1,6 @@
 # Electron / Vue Starter
 
-- 📦 Electron 6
+- 📦 Electron 9
 - 📦 Vue 2.6
 - 📦 Vue Router
 - 📦 Vuex
