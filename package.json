@@ -4,8 +4,8 @@
   "private": true,
   "description": "Electron / Vue starter",
   "author": {
-    "email": "lettucekiing@gmail.com",
-    "name": "Marco Schuster"
+    "email": "your.email@example.com",
+    "name": "Your name"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
