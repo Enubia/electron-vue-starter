@@ -2,16 +2,21 @@
   "name": "vue-electron-starter",
   "version": "0.1.0",
   "private": true,
+  "description": "Electron / Vue starter",
+  "author": {
+    "email": "lettucekiing@gmail.com",
+    "name": "Marco Schuster"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "electron:build": "vue-cli-service electron:build",
+    "electron:build": "vue-cli-service electron:build --config electron-builder.json",
     "electron:serve": "vue-cli-service electron:serve",
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps"
   },
-  "main": "background.js",
+  "main": "dist_electron/bundled/background.js",
   "dependencies": {
     "core-js": "^3.4.3",
     "electron-store": "^5.1.0",
@@ -33,59 +38,12 @@
     "electron-builder": "^21.2.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "prettier": "^2.0.5",
     "vue-cli-plugin-electron-builder": "^1.4.4",
     "vue-template-compiler": "^2.6.10"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
   },
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ],
-  "build": {
-    "productName": "vue electron starter",
-    "appId": "org.org-name.application-name",
-    "directories": {
-      "output": "build"
-    },
-    "files": [
-      "dist/**/*"
-    ],
-    "dmg": {
-      "contents": [
-        {
-          "x": 410,
-          "y": 150,
-          "type": "link",
-          "path": "/Applications"
-        },
-        {
-          "x": 130,
-          "y": 150,
-          "type": "file"
-        }
-      ]
-    },
-    "mac": {
-      "icon": "build/icons/icon.icns"
-    },
-    "win": {
-      "icon": "build/icons/icon.ico"
-    },
-    "linux": {
-      "icon": "build/icons"
-    }
-  }
+  ]
 }
