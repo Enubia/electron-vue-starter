@@ -4,8 +4,12 @@ module.exports = {
     node: true,
   },
   extends: ['plugin:vue/essential', 'eslint:recommended'],
-  rules: {},
+  rules: {
+    "no-console": "warn"
+  },
   parserOptions: {
     parser: 'babel-eslint',
+    ecmaVersion: 2016,
+    ecmaFeatures: { legacyDecorators: true },
   },
 };

@@ -20,10 +20,22 @@
 </template>
 
 <script>
-export default {
+import { Vue, Component } from 'vue-property-decorator';
+@Component({
   name: 'Ecosystem',
-  props: {
-    msg: String,
-  },
-};
+})
+export default class Ecosystem extends Vue {}
 </script>
+<style scoped lang="scss">
+ul {
+  list-style-type: none;
+  padding: 0;
+  li {
+    display: inline-block;
+    margin: 0 10px;
+    a {
+      color: #42a5b9;
+    }
+  }
+}
+</style>

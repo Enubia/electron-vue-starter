@@ -7,23 +7,21 @@
 </template>
 
 <script>
-export default {
-  props: {
-    size: {
-      type: Number,
-      default: 14,
-    },
-  },
-  computed: {
-    dotSize() {
-      const size = `${this.size}px`;
-      return {
-        width: size,
-        height: size,
-      };
-    },
-  },
-};
+import { Vue, Component, Prop } from 'vue-property-decorator';
+@Component({
+  name: 'Loading',
+})
+export default class Loading extends Vue {
+  @Prop({ Number, default: 14 }) size;
+
+  get dotSize() {
+    const size = `${this.size}px`;
+    return {
+      width: size,
+      height: size,
+    };
+  }
+}
 </script>
 
 <style scoped>

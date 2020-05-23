@@ -1,6 +1,5 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+  <div>
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
@@ -19,32 +18,31 @@
 </template>
 
 <script>
+import { Vue, Component } from 'vue-property-decorator';
 import Ecosystem from '../components/Ecosystem.vue';
 
-export default {
+@Component({
   name: 'Main',
   components: {
     Ecosystem,
   },
-  props: {
-    msg: String,
-  },
-};
+})
+export default class Main extends Vue {}
 </script>
 
-<style>
+<style scoped lang="scss">
 h3 {
   margin: 40px 0 0;
+}
+a {
+  color: #42b983;
 }
 ul {
   list-style-type: none;
   padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
 }
 </style>

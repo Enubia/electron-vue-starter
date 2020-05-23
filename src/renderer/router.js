@@ -10,9 +10,7 @@ const router = new Router({
       path: '/',
       name: 'main-page',
       component: require('./pages/Main.vue').default,
-      meta: {
-        requiresAuth: true,
-      },
+      meta: {},
     },
     {
       path: '*',
@@ -20,23 +18,5 @@ const router = new Router({
     },
   ],
 });
-
-/*
-router.beforeResolve((to, from, next) => {
-  if (to.matched.some(record => record.meta.requiresAuth)) {
-    // Assign username to a vue prototype variable to pass
-    // authentication check.
-    if (Vue.prototype.$variable.username) {
-      return next()
-    }
-
-    return next({
-      path: '/login'
-    });
-  }
-
-  next()
-})
-*/
 
 export default router;
