@@ -1,8 +1,8 @@
 {
-  "productName": "vue electron starter",
+  "productName": "Vue Electron Starter",
   "appId": "org.org-name.application-name",
   "directories": {
-    "output": "build"
+    "output": "release"
   },
   "files": ["dist_electron/**/*"],
   "dmg": {
@@ -21,12 +21,12 @@
     ]
   },
   "mac": {
-    "icon": "build/icons/icon.icns"
+    "icon": "build/icon.icns"
   },
   "win": {
-    "icon": "build/icons/icon.ico"
+    "icon": "build/icon.ico"
   },
   "linux": {
-    "icon": "build/icons"
+    "icon": "build/icon.ico"
   }
 }
