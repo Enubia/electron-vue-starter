@@ -1,7 +1,7 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from 'vue';
+import Router from 'vue-router';
 
-Vue.use(Router)
+Vue.use(Router);
 
 const router = new Router({
   mode: process.env.IS_ELECTRON ? 'hash' : 'history',
@@ -11,15 +11,15 @@ const router = new Router({
       name: 'main-page',
       component: require('./pages/Main.vue').default,
       meta: {
-        requiresAuth: true
-      }
+        requiresAuth: true,
+      },
     },
     {
       path: '*',
-      redirect: '/'
-    }
-  ]
-})
+      redirect: '/',
+    },
+  ],
+});
 
 /*
 router.beforeResolve((to, from, next) => {
@@ -39,4 +39,4 @@ router.beforeResolve((to, from, next) => {
 })
 */
 
-export default router
+export default router;

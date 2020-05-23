@@ -1,13 +1,14 @@
 module.exports = {
-  'presets': [
-    '@vue/cli-plugin-babel/preset'
-  ],
+  presets: ['@vue/cli-plugin-babel/preset'],
 
   plugins: [
-    ['babel-plugin-module-resolver', {
-      alias: {
-        '@': './src/renderer',
-      }
-    }]
-  ]
-}
+    [
+      'babel-plugin-module-resolver',
+      {
+        alias: {
+          '@': './src/renderer',
+        },
+      },
+    ],
+  ],
+};
