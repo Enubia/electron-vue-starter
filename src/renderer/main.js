@@ -2,6 +2,8 @@ import Vue from 'vue';
 import Electron from 'electron';
 import ElectronStore from 'electron-store';
 
+import './assets/scss/main.scss';
+
 import App from './App';
 import router from './router.js';
 import store from './store';
