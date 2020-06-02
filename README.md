@@ -1,15 +1,13 @@
 # Electron / Vue Starter
 
-- 📦 Electron 9
-- 📦 Vue 2.6
-- 📦 Vue Router
-- 📦 Vuex
-- 📦 [Class based component syntax](https://github.com/kaorun343/vue-property-decorator)
-- 📦 Config (electron-store)
-- 📦 SASS support
-- ✅ Supports `@/filename` for easy renderer file reference
-- ✅ Save window location / size
-- ✅ Open in browser helper function `Vue.prototype.$open`
+- Electron 9
+- Vue 2.6, Vue Router, Vuex
+- [Class based component syntax](https://github.com/kaorun343/vue-property-decorator)
+- Config (electron-store)
+- SASS support
+- Supports `@/filename` for easy renderer file reference
+- Save window location / size
+- Open in browser helper function `Vue.prototype.$open`
 
 ## Project setup
 
