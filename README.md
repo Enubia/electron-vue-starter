@@ -1,3 +1,6 @@
+![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)
+![David](https://img.shields.io/david/lettucekiing/electron-vue-starter)
+
 # Electron / Vue Starter
 
 - Electron 9
