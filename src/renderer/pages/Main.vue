@@ -19,7 +19,7 @@
 
 <script>
 import { Vue, Component } from 'vue-property-decorator';
-import Ecosystem from '@/src/components/Ecosystem.vue';
+import Ecosystem from '@/renderer/components/Ecosystem.vue';
 
 @Component({
   name: 'Main',
