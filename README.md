@@ -4,12 +4,14 @@
 # Electron / Vue Starter
 
 - Electron 9
+- [Typescript](https://www.typescriptlang.org/)
 - Vue 2.6, Vue Router
 - [Class based component syntax](https://github.com/kaorun343/vue-property-decorator)
 - Config (electron-store)
 - SASS support
-- Supports `@/filename` for easy renderer file reference
+- Supports `@/filename` for src file reference
 - Save window location / size
+- [Husky](https://github.com/typicode/husky) for pre commit/push hooks
 
 ## Project setup
 
@@ -29,7 +31,7 @@ npm run electron:serve
 npm run electron:build
 ```
 
-### Lints and fixes files
+### Lints files
 
 ```
 npm run lint
