@@ -1,5 +1,3 @@
-'use strict';
-
 import { app, protocol, BrowserWindow } from 'electron';
 import windowStateKeeper from 'electron-window-state';
 
@@ -23,7 +21,7 @@ protocol.registerSchemesAsPrivileged([
 ]);
 
 function createWindow() {
-  let mainWindowState = windowStateKeeper({
+  const mainWindowState = windowStateKeeper({
     defaultWidth: 800,
     defaultHeight: 600,
   });
@@ -41,9 +39,6 @@ function createWindow() {
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     win.loadURL(process.env.WEBPACK_DEV_SERVER_URL);
-    if (!process.env.IS_TEST) {
-      win.webContents.openDevTools()
-    }
   } else {
     createProtocol('app');
     win.loadURL('app://./index.html');

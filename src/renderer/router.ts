@@ -9,7 +9,7 @@ const router = new Router({
     {
       path: '/',
       name: 'main-page',
-      component: require('./pages/Main.vue').default,
+      component: () => import('./pages/Main.vue'),
       meta: {},
     },
     {

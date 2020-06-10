@@ -1,6 +1,6 @@
 {
-  "productName": "Vue Electron Starter",
-  "appId": "org.org-name.application-name",
+  "productName": "your app",
+  "appId": "your app id",
   "directories": {
     "output": "release"
   },

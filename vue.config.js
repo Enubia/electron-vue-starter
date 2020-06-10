@@ -1,19 +1,27 @@
 module.exports = {
   pluginOptions: {
     electronBuilder: {
-      mainProcessFile: 'src/electron/background.js',
+      disableMainProcessTypescript: false,
+      mainProcessTypeChecking: false,
+      mainProcessFile: 'src/electron/background.ts',
       builderOptions: {
-        appId: 'test.com',
+        appId: 'com.electron.yourappname',
+        nsis: {
+          oneClick: false,
+          allowToChangeInstallationDirectory: true,
+        },
         win: {
+          target: ['nsis', 'portable'],
           icon: 'public/favicon.ico',
         },
+        // mac: { icon: 'public/macfavicon.ico' },
       },
     },
   },
 
   pages: {
     index: {
-      entry: 'src/renderer/main.js',
+      entry: 'src/renderer/main.ts',
       template: 'public/index.html',
     },
   },

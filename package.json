@@ -1,7 +1,7 @@
 {
   "name": "vue-electron-starter",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "description": "Electron / Vue starter",
   "author": {
     "email": "your.email@example.com",
@@ -10,42 +10,65 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "electron:build": "vue-cli-service electron:build --config electron-builder.json",
+    "lint": "eslint --ignore-path .eslintignore src",
+    "electron:build": "vue-cli-service electron:build",
     "electron:serve": "vue-cli-service electron:serve",
     "postinstall": "electron-builder install-app-deps",
-    "postuninstall": "electron-builder install-app-deps"
+    "postuninstall": "electron-builder install-app-deps",
+    "upgradePackages": "ncu -u -x @types/node"
   },
-  "main": "dist_electron/bundled/background.js",
+  "main": "background.js",
   "dependencies": {
-    "core-js": "^3.4.3",
+    "electron-context-menu": "^2.0.1",
     "electron-store": "^5.2.0",
     "electron-window-state": "^5.0.3",
-    "tough-cookie": "^4.0.0",
-    "vue": "^2.6.10",
+    "escape-string-regexp": "^4.0.0",
+    "tailwindcss": "^1.4.6",
+    "tmi.js": "^1.5.0",
+    "vue": "^2.6.11",
     "vue-property-decorator": "^8.4.2",
-    "vue-router": "^3.3.2",
-    "vuex": "^3.1.2",
-    "vuex-electron": "^1.0.3"
+    "vue-router": "^3.3.2"
   },
   "devDependencies": {
+    "@electron/typescript-definitions": "^8.7.4",
+    "@fullhuman/postcss-purgecss": "^2.2.0",
+    "@hokify/eslint-config-vue": "^0.4.0",
+    "@types/node": "12.12.42",
+    "@types/tmi.js": "^1.4.0",
+    "@typescript-eslint/eslint-plugin": "^3.2.0",
     "@vue/cli-plugin-babel": "^4.4.1",
     "@vue/cli-plugin-eslint": "^4.4.1",
+    "@vue/cli-plugin-typescript": "^4.4.1",
     "@vue/cli-service": "^4.4.1",
-    "babel-eslint": "^10.0.3",
     "babel-plugin-module-resolver": "^4.0.0",
+    "css-loader": "^3.5.3",
     "electron": "^9.0.3",
     "electron-builder": "^22.7.0",
-    "eslint": "^6.8.0",
-    "eslint-plugin-vue": "^6.2.2",
-    "prettier": "^2.0.5",
+    "eslint": "^7.2.0",
+    "husky": "^4.2.5",
     "node-sass": "^4.14.1",
+    "prettier": "^2.0.5",
     "sass-loader": "^8.0.2",
-    "vue-cli-plugin-electron-builder": "^1.4.4",
-    "vue-template-compiler": "^2.6.10"
+    "typescript": "^3.9.5",
+    "vue-cli-plugin-electron-builder": "^1.4.6",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "bugs": {
+    "url": "yoururl"
+  },
+  "homepage": "yourhomepage",
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+yourrepolink.git"
+  }
 }

@@ -4,19 +4,16 @@ import ElectronStore from 'electron-store';
 
 import './assets/scss/main.scss';
 
-import App from './App';
-import router from './router.js';
-import store from './store';
+import App from './App.vue';
+import router from './router';
 
 Vue.config.productionTip = false;
 
 Vue.prototype.$electron = Electron;
 Vue.prototype.$config = new ElectronStore();
-Vue.prototype.$open = (link) => Electron.shell.openExternal(link);
 
 /* eslint-disable no-new */
 new Vue({
   ...App,
   router,
-  store,
 }).$mount('#app');
